@@ -9,6 +9,7 @@ import (
 	"github.com/travisty-/monkey/token"
 )
 
+// PROMPT represents the prompt character used in the REPL.
 const PROMPT = ">> "
 
 // Start initializes the REPL that tokenizes Monkey

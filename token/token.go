@@ -1,7 +1,11 @@
 package token
 
+// TokenType allows us to distinguish
+// between different types of tokens.
 type TokenType string
 
+// Token represents an individual token, containing
+// both the token's type and literal value.
 type Token struct {
 	Type    TokenType
 	Literal string
@@ -58,6 +62,8 @@ var keywords = map[string]TokenType{
 	"return": RETURN,
 }
 
+// LookupIdent checks the keywords table to determine if
+// the given identifier is a language-defined keyword.
 func LookupIdent(ident string) TokenType {
 	if tok, ok := keywords[ident]; ok {
 		return tok
