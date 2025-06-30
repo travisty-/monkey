@@ -1,0 +1,44 @@
+version: "2"
+linters:
+  enable:
+    - modernize
+    - revive
+    - unparam
+  settings:
+    revive:
+      enable-default-rules: true
+      rules:
+        - name: bare-return
+        - name: confusing-results
+        - name: constant-logical-expr
+        - name: datarace
+        - name: deep-exit
+        - name: defer
+        - name: early-return
+        - name: identical-branches
+        - name: identical-ifelseif-branches
+        - name: identical-ifelseif-conditions
+        - name: identical-switch-branches
+        - name: identical-switch-conditions
+        - name: import-shadowing
+        - name: modifies-value-receiver
+        - name: package-directory-mismatch
+        - name: redundant-import-alias
+        - name: struct-tag
+        - name: time-equal
+        - name: unchecked-type-assertion
+        - name: useless-break
+        - name: useless-fallthrough
+  exclusions:
+    presets:
+      - comments
+formatters:
+  enable:
+    - gofumpt
+    - goimports
+  settings:
+    gofumpt:
+      module-path: monkey
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
