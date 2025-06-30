@@ -23,3 +23,9 @@ go.work.sum
 
 # Environment files
 .env
+
+# Development environment files
+.devenv*
+.direnv*
+.pre-commit-config.yaml
+devenv.local.nix
