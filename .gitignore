@@ -23,3 +23,8 @@ go.work.sum
 
 # Environment files
 .env
+
+# Development environment files
+.direnv*
+.devenv*
+devenv.local.nix
