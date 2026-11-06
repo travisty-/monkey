@@ -15,6 +15,17 @@ let add = fn(x, y) {
 };
 
 let result = add(five, ten);
+!-/*5;
+5 < 10 > 5;
+
+if (5 < 10) {
+	return true;
+} else {
+	return false;
+}
+
+10 == 10;
+10 != 9;
 `
 
 	tests := []struct {
@@ -56,6 +67,43 @@ let result = add(five, ten);
 		{token.Comma, ","},
 		{token.Ident, "ten"},
 		{token.RParen, ")"},
+		{token.Semicolon, ";"},
+		{token.Bang, "!"},
+		{token.Minus, "-"},
+		{token.Slash, "/"},
+		{token.Asterisk, "*"},
+		{token.Int, "5"},
+		{token.Semicolon, ";"},
+		{token.Int, "5"},
+		{token.LT, "<"},
+		{token.Int, "10"},
+		{token.GT, ">"},
+		{token.Int, "5"},
+		{token.Semicolon, ";"},
+		{token.If, "if"},
+		{token.LParen, "("},
+		{token.Int, "5"},
+		{token.LT, "<"},
+		{token.Int, "10"},
+		{token.RParen, ")"},
+		{token.LBrace, "{"},
+		{token.Return, "return"},
+		{token.True, "true"},
+		{token.Semicolon, ";"},
+		{token.RBrace, "}"},
+		{token.Else, "else"},
+		{token.LBrace, "{"},
+		{token.Return, "return"},
+		{token.False, "false"},
+		{token.Semicolon, ";"},
+		{token.RBrace, "}"},
+		{token.Int, "10"},
+		{token.Eq, "=="},
+		{token.Int, "10"},
+		{token.Semicolon, ";"},
+		{token.Int, "10"},
+		{token.NotEq, "!="},
+		{token.Int, "9"},
 		{token.Semicolon, ";"},
 		{token.EOF, ""},
 		{token.EOF, ""},
